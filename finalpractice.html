@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Practice - Developer Portfolio</title>
+    <meta name="description" content="A portfolio showcasing web development projects, skills, and a contact form for collaboration opportunities.">
+    <link rel="stylesheet" href="stylesFinal.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Final Practice</h1>
+        <nav role="navigation" aria-label="Main Navigation">
+            <button id="menu-toggle" aria-label="Toggle Navigation">
+                ☰
+            </button>
+            <ul id="nav-links">
+                <li><a href="#aboutme">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact Form</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="aboutme">
+            <h2>About Me</h2>
+            <p>This is a sample paragraph for the section.</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div id="filter-menu">
+                <button onclick="filterProjects('all')">All</button>
+                <button onclick="filterProjects('web')">Web Development</button>
+                <button onclick="filterProjects('app')">App Development</button>
+                <button onclick="filterProjects('fullstack')">Full-Stack</button>
+            </div>
+            <article data-category="web">
+                <h3>Project 1: Portfolio Website</h3>
+                <figure>
+                    <img src="project1-thumbnail.jpg" alt="Screenshot of a personal portfolio website showcasing work and skills">
+                    <figcaption>A personal portfolio website showcasing my work and skills.</figcaption>
+                </figure>
+                <p>This project demonstrates my ability to create responsive and visually appealing websites using HTML, CSS, and JavaScript.</p>
+            </article>
+            <article data-category="app">
+                <h3>Project 2: E-commerce App</h3>
+                <figure>
+                    <img src="project2-thumbnail.jpg" alt="Screenshot of an e-commerce application with shopping cart and payment integration">
+                    <figcaption>An e-commerce application with a shopping cart and payment integration.</figcaption>
+                </figure>
+                <p>This project highlights my skills in building dynamic web applications using React and Node.js.</p>
+            </article>
+            <article data-category="fullstack">
+                <h3>Project 3: Blog Platform</h3>
+                <figure>
+                    <img src="project3-thumbnail.jpg" alt="Screenshot of a blogging platform with user authentication and content management features">
+                    <figcaption>A blogging platform with user authentication and content management features.</figcaption>
+                </figure>
+                <p>This project showcases my experience with full-stack development using Django and PostgreSQL.</p>
+            </article>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5, CSS3, and JavaScript</li>
+                <li>Responsive Web Design</li>
+                <li>React and Redux</li>
+                <li>Node.js and Express</li>
+                <li>Database Management (MySQL, PostgreSQL, MongoDB)</li>
+                <li>Version Control (Git, GitHub)</li>
+                <li>RESTful API Development</li>
+                <li>Testing and Debugging</li>
+                <li>Agile Development Practices</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact Form</h2>
+            <form id="contact-form" action="#" method="post" role="form" aria-label="Contact Form">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <span class="error-message" style="display: none; color: red;"></span>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <span class="error-message" style="display: none; color: red;"></span>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <span class="error-message" style="display: none; color: red;"></span>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer id="footer" role="contentinfo">
+        <p>&copy; 2023 Final Practice</p>
+    </footer>
+    <script src="script.js"></script>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-image" class="lightbox-content" alt="Expanded project image">
+        <div id="lightbox-caption" class="caption"></div>
+    </div>
+</body>
+</html>
